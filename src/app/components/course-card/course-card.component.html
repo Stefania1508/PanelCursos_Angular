@@ -1,0 +1,19 @@
+<div class="course">
+  <div class="left">
+    <h3>{{ course.name }}</h3>
+    <p>Duración: {{ course.hours }} horas</p>
+    <p class="meta">Nivel: {{ course.level }}</p>
+
+    <span class="badge" [class.active]="course.active" [class.inactive]="!course.active">
+      {{ course.active ? 'Activo' : 'Inactivo' }}
+    </span>
+  </div>
+
+  <div class="actions">
+    <button class="toggle" (click)="toggle()">
+      {{ course.active ? 'Desactivar' : 'Activar' }}
+    </button>
+
+    <button class="delete" (click)="remove()">Eliminar</button>
+  </div>
+</div>

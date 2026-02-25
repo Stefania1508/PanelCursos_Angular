@@ -1,0 +1,51 @@
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: grid;
+  gap: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+  background: #fff;
+
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+
+  label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+}
+
+.error {
+  color: #b00020;
+  font-size: 12px;
+}
+
+button {
+  background: #901fd6;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(1px);
+  }
+}

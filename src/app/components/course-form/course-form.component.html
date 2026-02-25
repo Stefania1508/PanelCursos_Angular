@@ -1,0 +1,38 @@
+<div class="form">
+  <div class="row">
+    <input
+      type="text"
+      placeholder="Nombre del curso"
+      [(ngModel)]="name"
+      (blur)="touched = true"
+    />
+    <small class="error" *ngIf="nameInvalid">El nombre es obligatorio.</small>
+  </div>
+
+  <div class="row">
+    <input
+      type="number"
+      placeholder="Duración (horas)"
+      [(ngModel)]="hours"
+      (blur)="touched = true"
+    />
+    <small class="error" *ngIf="hoursInvalid">La duración debe ser mayor a 0.</small>
+  </div>
+
+  <div class="row">
+    <select [(ngModel)]="level" (blur)="touched = true">
+      <option value="" disabled selected>Nivel</option>
+      <option *ngFor="let l of levels" [value]="l">{{ l }}</option>
+    </select>
+    <small class="error" *ngIf="levelInvalid">Selecciona un nivel.</small>
+  </div>
+
+  <div class="row inline">
+    <label>
+      <input type="checkbox" [(ngModel)]="active" />
+      Estado activo
+    </label>
+  </div>
+
+  <button (click)="submit()">Agregar curso</button>
+</div>

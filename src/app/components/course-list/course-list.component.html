@@ -1,0 +1,10 @@
+<p class="empty" *ngIf="courses.length === 0">No hay cursos registrados.</p>
+
+<div class="list" *ngIf="courses.length > 0">
+  <app-course-card
+    *ngFor="let c of courses"
+    [course]="c"
+    (toggleRequested)="toggle($event)"
+    (deleteRequested)="remove($event)"
+  ></app-course-card>
+</div>

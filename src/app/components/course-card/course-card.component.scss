@@ -1,0 +1,70 @@
+.course {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.left {
+  h3 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  .meta {
+    margin-top: 4px;
+  }
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+
+  &.active {
+    background: #e6fff0;
+    border: 1px solid #baf2d1;
+    color: #137a1c;
+  }
+
+  &.inactive {
+    background: #ffecec;
+    border: 1px solid #ffc3c3;
+    color: #a11212;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+
+  button {
+    border: 0;
+    border-radius: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .toggle {
+    background: #759aff;
+    color: #1f1f1f;
+  }
+
+  .delete {
+    background: #e53935;
+    color: #fff;
+  }
+}
